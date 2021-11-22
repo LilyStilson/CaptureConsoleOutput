@@ -6,7 +6,7 @@ uses
   System.Classes, System.SysUtils, System.Threading,
   {$IFDEF MSWINDOWS}
   Winapi.Windows;
-  {$ELSE MACOS}
+  {$ELSE POSIX}
   Posix.Base;
   {$ENDIF}
 
