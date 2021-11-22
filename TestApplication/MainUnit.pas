@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, System.Threading,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Memo.Types, FMX.StdCtrls, FMX.Controls.Presentation, FMX.ScrollBox,
-  FMX.Memo, FMX.Objects, FMX.Layouts, FMX.BufferedLayout, CaptureConsoleUnit;
+  FMX.Memo, FMX.Objects, FMX.Layouts, CaptureConsoleUnit;
 
 type
   TForm1 = class(TForm)
