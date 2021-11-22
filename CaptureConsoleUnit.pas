@@ -57,9 +57,9 @@ begin
         try
           repeat
             dRunning := WaitForSingleObject(piProcess.hProcess, 1);
-            PeekNamedPipe(hRead, nil, 0, nil, @dAvailable, nil);
-            if dAvailable > 0 then begin
-              repeat
+            repeat
+              PeekNamedPipe(hRead, nil, 0, nil, @dAvailable, nil);
+              if dAvailable > 0 then begin
                 dRead := 0;
                 ReadFile(hRead, pBuffer[0], CReadBuffer, dRead, nil);
                 pBuffer[dRead] := #0;
@@ -75,9 +75,8 @@ begin
                   TempString := '';
                 end else
                   TempString := TempString + dBuffer[0];
-
-              until dRead < CReadBuffer;
-            end;
+              end else Break;
+            until dRead < CReadBuffer;
             //Application.ProcessMessages;
           until dRunning <> WAIT_TIMEOUT;
         finally

@@ -1,0 +1,4 @@
+*.dcu
+*.~*
+*.exe
+_history\*
